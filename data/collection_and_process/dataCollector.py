@@ -126,7 +126,7 @@ def extract(img_path,HEIGHT=540,WIDTH=960):
 def extract_data_in_loop(data_dir, csv_path = "data.csv", start=0,end = -1):
     path_list = [os.path.join(data_dir, i) for i in os.listdir(data_dir)]
     for img_path in path_list[start:end]:
-        extract(img_path)
+        extract(img_path,HEIGHT,WIDTH)
         print(f"{img_path} data is stored.")
         n = input("Continue ? : ")
         if n == "N" or n=='n':
