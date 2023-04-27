@@ -78,7 +78,7 @@ def extract(img_path,HEIGHT=540,WIDTH=960):
     while True:
         k=cv.waitKey(0)
         print(k)
-        if k==255:
+        if k==255 or k==127:
             arr=np.full(shape=(4,4),fill_value=blank)
             round=0; 
             count=-1; 
