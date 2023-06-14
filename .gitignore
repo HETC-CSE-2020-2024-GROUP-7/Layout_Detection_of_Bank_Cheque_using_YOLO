@@ -1,0 +1,6 @@
+temp/
+.pyenv/
+.env/
+.py/
+.vscode/
+*/X/*
