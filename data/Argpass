@@ -1,0 +1,32 @@
+import cv2
+from Createrect import create_rectangle
+image_path = "D:\Project Gr-7\\1.jpg"
+image = cv2.imread(image_path)
+signature_x = int(input("Enter the x-coordinate of the signature: "))#384
+signature_y = int(input("Enter the y-coordinate of the signature: "))#142
+signature_height = int(input("Enter the height of the signature: "))#60
+signature_width = int(input("Enter the width of the signature: "))#100
+
+date_x = int(input("Enter the x-coordinate of the date: "))#371
+date_y = int(input("Enter the y-coordinate of the date: "))#18
+date_height = int(input("Enter the height of the date: "))#30
+date_width = int(input("Enter the width of the date: "))#120
+
+amount_x = int(input("Enter the x-coordinate of the amount: "))#367
+amount_y = int(input("Enter the y-coordinate of the amount: "))#94
+amount_height = int(input("Enter the height of the amount: "))#30
+amount_width = int(input("Enter the width of the amount: "))#100
+
+account_number_x = int(input("Enter the x-coordinate of the account number: "))#28
+account_number_y = int(input("Enter the y-coordinate of the account number: "))#128
+account_number_height = int(input("Enter the height of the account number: "))#30
+account_number_width = int(input("Enter the width of the account number: "))#140
+
+image_with_sign = create_rectangle(image, signature_x, signature_y, signature_height, signature_width)
+image_with_date = create_rectangle(image_with_sign, date_x, date_y, date_height, date_width)
+image_with_amount = create_rectangle(image_with_date, amount_x, amount_y, amount_height, amount_width)
+image_with_account = create_rectangle(image_with_amount, account_number_x, account_number_y, account_number_height, account_number_width)
+
+cv2.imshow("Image with Rectangles", image_with_account)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
