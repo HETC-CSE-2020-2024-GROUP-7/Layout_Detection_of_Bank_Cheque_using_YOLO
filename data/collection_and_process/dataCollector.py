@@ -135,4 +135,4 @@ def extract_data_in_loop(data_dir, csv_path = "data.csv", start=0,end = -1):
 
 
 # Set the image folder location here
-extract_data_in_loop(r'/home/aritrarc/Pictures/Screenshots')
+extract_data_in_loop(r'D:\AritrA\Layout_Detection_of_Bank_Cheque_using_YOLO\data\X')
